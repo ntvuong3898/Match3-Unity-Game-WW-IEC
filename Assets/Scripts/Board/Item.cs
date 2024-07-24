@@ -14,18 +14,27 @@ public class Item
 
     public virtual void SetView()
     {
-        string prefabname = GetPrefabName();
+        //string prefabname = GetPrefabName();
 
-        if (!string.IsNullOrEmpty(prefabname))
+        //if (!string.IsNullOrEmpty(prefabname))
+        //{
+        //    GameObject prefab = Resources.Load<GameObject>(prefabname);
+        //    if (prefab)
+        //    {
+        //        View = GameObject.Instantiate(prefab).transform;
+        //    }
+        //}
+
+        int prefabid = GetPrefabID();
+
+        GameObject prefab = Resources.Load<TileData>("TileData " + (prefabid + 1)).Tile;
+        if (prefab)
         {
-            GameObject prefab = Resources.Load<GameObject>(prefabname);
-            if (prefab)
-            {
-                View = GameObject.Instantiate(prefab).transform;
-            }
+            View = GameObject.Instantiate(prefab).transform;
         }
     }
 
+    protected virtual int GetPrefabID() { return 0; }
     protected virtual string GetPrefabName() { return string.Empty; }
 
     public virtual void SetCell(Cell cell)

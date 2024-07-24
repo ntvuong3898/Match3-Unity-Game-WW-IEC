@@ -21,7 +21,36 @@ public class NormalItem : Item
     {
         ItemType = type;
     }
+    protected override int GetPrefabID()
+    {
+        int prefabid = 0;
+        switch (ItemType)
+        {
+            case eNormalType.TYPE_ONE:
+                prefabid = 0;
+                break;
+            case eNormalType.TYPE_TWO:
+                prefabid = 1;
+                break;
+            case eNormalType.TYPE_THREE:
+                prefabid = 2;
+                break;
+            case eNormalType.TYPE_FOUR:
+                prefabid = 3;
+                break;
+            case eNormalType.TYPE_FIVE:
+                prefabid = 4;
+                break;
+            case eNormalType.TYPE_SIX:
+                prefabid = 5;
+                break;
+            case eNormalType.TYPE_SEVEN:
+                prefabid = 6;
+                break;
+        }
 
+        return prefabid;
+    }
     protected override string GetPrefabName()
     {
         string prefabname = string.Empty;
