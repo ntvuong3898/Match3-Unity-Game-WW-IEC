@@ -29,6 +29,23 @@ public class UIMainManager : MonoBehaviour
         m_gameManager.ClearLevel();
         m_gameManager.SetState(GameManager.eStateGame.MAIN_MENU);
     }
+    internal void RestartLevel()
+    {
+        m_gameManager.ClearLevel();
+
+        switch (m_gameManager.curMode)
+        {
+            case GameManager.eLevelMode.TIMER:
+                m_gameManager.LoadLevel(GameManager.eLevelMode.TIMER);
+                break;
+            case GameManager.eLevelMode.MOVES:
+                m_gameManager.LoadLevel(GameManager.eLevelMode.MOVES);
+                break;
+            default:
+                break;
+        }
+
+    }
 
     void Update()
     {

@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public eLevelMode curMode;
+
     public event Action<eStateGame> StateChangedAction = delegate { };
 
     public enum eLevelMode
@@ -88,11 +90,15 @@ public class GameManager : MonoBehaviour
 
         if (mode == eLevelMode.MOVES)
         {
+            curMode = eLevelMode.MOVES;
+
             m_levelCondition = this.gameObject.AddComponent<LevelMoves>();
             m_levelCondition.Setup(m_gameSettings.LevelMoves, m_uiMenu.GetLevelConditionView(), m_boardController);
         }
         else if (mode == eLevelMode.TIMER)
         {
+            curMode = eLevelMode.TIMER;
+
             m_levelCondition = this.gameObject.AddComponent<LevelTime>();
             m_levelCondition.Setup(m_gameSettings.LevelMoves, m_uiMenu.GetLevelConditionView(), this);
         }
