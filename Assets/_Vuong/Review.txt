@@ -1,0 +1,14 @@
+
+Câu 1: chưa làm
+Câu 2: đã làm
+Câu 3: đã làm
+Câu 4: chưa làm
+
+- Data game code cứng, em đã tính làm code đọc data từ scriptable nhưng hơi tốn thời gian nên thôi, thay vào đó em làm scriptsable cho từng prefabs.
+- Đọc data bằng string không nhanh bằng int, em có sửa nó rồi.
+- Dự án không dùng singleton, làm code khá phức tạp, khó nắm bắt.
+- Board game thì nên tạo prefabs trước, như vậy load lên cũng nhẹ hơn, mà có thể custom hình dạng.
+- UI hiện đang show hết lên scene, dẫn đến việc tốn tài nguyên, nên code dùng cái nào thì mới load cái đấy, nói chung là cái hệ thống UI này không hay.
+- Việc tạo ra các game object cell và item làm hiệu suất bị nặng, có thể tạo trước board, item thì làm pooling.
+
+Việc đánh giá cần nhiều thời gian hơn, vì thời gian có hạn, em xin tạm dừng ở đây, em cám ơn anh/chị đã review qua bài test này ạ.

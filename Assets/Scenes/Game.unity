@@ -1942,7 +1942,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1617975176
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1977,6 +1977,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   btnClose: {fileID: 1111860661}
+  btnRestart: {fileID: 900366321}
 --- !u!222 &1617975178
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2639,6 +2640,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ed4360ab36daef4c9dd32250c4fa46d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  curMode: 0
 --- !u!4 &2136919903
 Transform:
   m_ObjectHideFlags: 0
